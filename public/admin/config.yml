@@ -1,0 +1,20 @@
+backend:
+  name: git-gateway
+  publish_mode: editorial_workflow
+  branch: master # Branch to update (optional; defaults to master)
+
+media_folder: "themes/oneclicktheme/static/img" # Folder where user uploaded files should go
+public_folder: "img"
+
+collections: # A list of collections the CMS should be able to edit
+  - name: "homepage"
+    label: "Homepage"
+    files:
+      - file: "data/homepage/templateportfolio.json"
+        label: "Portfolio"
+        name: "portfolio"
+        fields:
+          - {label: "Title", name: "title", widget: string}
+          - {label: "Templates", name: templates, widget: list, fields: [
+          {label: "Link", name: "link", widget: string},
+          {label: "Image", name: "image", widget: image}]}

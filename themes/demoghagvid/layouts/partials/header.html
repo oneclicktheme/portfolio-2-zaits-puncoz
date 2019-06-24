@@ -1,0 +1,24 @@
+<!--Header-->
+<header class="absolute top-0 left-0 right-0 py-6 px-4 z-50">
+    <div class="container mx-auto">
+        {{ with $.Site.Data.menu.menu }}
+        <div class="flex flex-wrap justify-between items-center">
+            <div>
+                <a class="h-16 inline-block" href="/">
+                    <img class="inline-block h-full" src="{{.logo}}" alt="{{.Title}}" />
+                </a>
+            </div>
+            <nav>
+                <ul class="flex items-center">
+                    {{ range .nav }}
+                    <li class="mr-8">
+                        <a class="inline-block text-base-link hover:text-primary-text" href="{{.url}}">{{.text}}</a>
+                    </li>
+                    {{ end }}
+                </ul>
+            </nav>
+        </div>
+        {{ end }}
+    </div>
+</header>
+<!--End Header-->

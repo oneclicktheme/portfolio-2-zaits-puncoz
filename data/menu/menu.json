@@ -1,0 +1,13 @@
+{
+  "logo": "/img/logo.svg",
+  "nav": [
+    {
+      "text": "Home",
+      "url": "/"
+    },
+    {
+      "text": "Blog",
+      "url": "https://medium.com/"
+    }
+  ]
+}

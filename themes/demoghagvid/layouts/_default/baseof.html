@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+{{ partial "head.html" }}
+
+<body class="bg-primary-background text-base-color antialiased font-body leading-snug">
+
+<section class="oneclicktheme-header px-4 py-2">
+    <div class="container mx-auto">
+        <div class="flex flex-wrap justify-between items-center">
+            <div>
+                <a class="inline-block" href="https://oneclicktheme.netlify.com/" target="_blank">
+                    <img class="h-10 inline-block rounded-full shadow-md w-10" src="/img/oneclicktheme-logo.png" alt="One Click Theme">
+                </a>
+            </div>
+            <div>
+                <a class="download-btn relative text-sm inline-block px-4 py-2 rounded text-sm" href="#">Get started</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="relative">
+    {{ partial "header" . }}
+
+    <main class="h-screen">
+        {{ block "main" . }} {{end}}
+    </main>
+
+    {{ partial "footer" . }}
+</div>
+
+<!-- Scripts -->
+{{ $scripts := resources.Get "js/manifest.js" | fingerprint }}
+{{ with $scripts }}
+<script type="text/javascript" src="{{ .Permalink | relURL }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous" defer></script>
+{{ $.Scratch.Set "$scripts" . }}
+{{ end }}
+
+{{ $scripts := resources.Get "js/vendor.js" | fingerprint }}
+{{ with $scripts }}
+<script type="text/javascript" src="{{ .Permalink | relURL }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous" defer></script>
+{{ $.Scratch.Set "scripts" . }}
+{{ end }}
+
+{{ $scripts := resources.Get "js/app.js" | fingerprint }}
+{{ with $scripts }}
+<script type="text/javascript" src="{{ .Permalink | relURL }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous" defer></script>
+{{ $.Scratch.Set "scripts" . }}
+{{ end }}
+</body>
+
+</html>
