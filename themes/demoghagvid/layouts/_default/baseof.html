@@ -14,8 +14,33 @@
                 </a>
             </div>
             <div>
-                <span class="inline-block mr-2 text-sm text-grey">If you like the theme then, To</span>
-                <a class="download-btn relative text-sm inline-block px-4 py-2 rounded text-sm uppercase" href="#">Get start</a>
+                <span class="inline-block mr-2 text-sm text-grey">If you like the theme then</span>
+                <button class="outline-none modal-toggle btn relative text-sm inline-block
+                 px-4 py-2 rounded text-sm uppercase font-bold" href="#">Let's start</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal">
+        <div class="modal-overlay modal-toggle"></div>
+        <div class="modal-wrapper modal-transition">
+            <button class="modal-close modal-toggle">x</button>
+            <div class="modal-body">
+                <div class="modal-content">
+                    <div class="flex flex-wrap -mx-4">
+                        <div class="w-1/2 px-4">
+                            <img src="/img/demo/product_manager.svg" alt="Illustration">
+                        </div>
+                        <div class="w-1/2 px-4">
+                            <div class="sign-up-form-wrap">
+                                <div>
+                                    <h2 class="capitalize font-black text-3xl">To get started</h2>
+                                    <p class="text-grey text-xs">Please fill the necessary information for your site</p>
+                                </div>
+                                {{ partial "signup-form" }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
