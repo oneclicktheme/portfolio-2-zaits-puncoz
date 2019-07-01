@@ -3,7 +3,7 @@
 
 {{ partial "head.html" }}
 
-<body class="bg-primary-background text-base-color antialiased font-body leading-snug">
+<body class="bg-primary-bg text-primary-text antialiased font-body leading-snug">
 
 <section class="oneclicktheme-header px-4 py-2">
     <div class="container mx-auto">
@@ -16,7 +16,8 @@
             <div>
                 <span class="inline-block mr-2 text-sm text-grey">If you like the theme then</span>
                 <button class="outline-none modal-toggle btn relative text-sm inline-block
-                 px-4 py-2 rounded text-sm uppercase font-bold" href="#">Let's start</button>
+                 px-4 py-2 rounded text-sm uppercase font-bold" href="#">Let's start
+                </button>
             </div>
         </div>
     </div>
@@ -45,6 +46,38 @@
         </div>
     </div>
 </section>
+
+<!--color-picker tool-->
+<aside class="text-grey absolute bg-white bottom-0 mb-5 mr-5 p-6 right-0 rounded shadow-2xl z-50">
+    <h1 class="font-bold mb-4 text-sm">Theme Switcher</h1>
+    <div class="flex flex-wrap items-center justify-between">
+        <h3>Defaults</h3>
+        <div class="flex">
+            <span class="w-10 h-10 inline-block rounded-full mr-4" data-bg-color="#b84130" data-color="#fff"
+                  style="background-color: #b84130">&nbsp;
+            </span>
+            <span class="w-10 h-10 inline-block rounded-full mr-4" data-bg-color="#363d98" data-color="#fff"
+                  style="background-color: #363d98">&nbsp;
+            </span>
+            <span class="w-10 h-10 inline-block rounded-full" data-bg-color="#FFD5CD" data-color="#333"
+                  style="background-color: #FFD5CD">&nbsp;
+            </span>
+        </div>
+    </div>
+    <div class="mt-4">
+        <h3 class="font-bold mb-4 text-sm">Dynamic Color</h3>
+    </div>
+    <div class="flex items-center">
+        <div class="mr-4">
+            <label for="bg-color">Background:</label>
+            <input type="color" id="bg-color" name="Background">
+        </div>
+        <div>
+            <label for="color">Color:</label>
+            <input type="color" id="color" name="Color">
+        </div>
+    </div>
+</aside>
 
 <div class="relative">
     {{ partial "header" . }}

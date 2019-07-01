@@ -50,7 +50,7 @@
 .custom-border {
   &:before {
     content: '';
-    border: 1px solid var(--color-text-primary);
+    border: 1px solid var(--primary-color);
     display: inline-block;
     width: 100%;
     height: 100%;
@@ -163,4 +163,25 @@
 
 .modal-content > *:last-child {
   margin-bottom: 0;
+}
+
+/* Toolbox styles
+---------------------------------------------------- */
+.tools {
+  position: fixed;
+  background: rgba(225,225,225,.75);
+  padding: 1em;
+  margin: .5em;
+  border-radius: .25em;
+  max-width: 20em;
+  z-index: 100;
+}
+
+.tools > * {
+  display: inline-block;
+}
+
+.tools label {
+  min-width: 9em;
+  max-width: 11em;
 }

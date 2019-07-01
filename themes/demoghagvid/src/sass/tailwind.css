@@ -5,10 +5,8 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap');
 
 :root {
-    --color-bg-primary: #232323;
-    --color-text-primary: #ffff8c;
-    --color-text-base-color: #fff;
-    --color-base-link: #fff;
+    --primary-bg-color: #400080;
+    --primary-color: #ffffff;
 }
 
 @tailwind base;

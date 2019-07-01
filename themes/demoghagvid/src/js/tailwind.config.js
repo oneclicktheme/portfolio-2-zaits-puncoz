@@ -16,10 +16,8 @@ module.exports = {
     colors: {
       white: '#fff',
       'grey': '#565656',
-      'base-color': 'var(--color-text-base-color)',
-      'primary-background': "var(--color-bg-primary)",
-      'primary-text': "var(--color-text-primary)",
-      'base-link': "var(--color-base-link)",
+      'primary-text': 'var(--primary-color)',
+      'primary-bg': "var(--primary-bg-color)",
     },
     extend: {
       spacing: {
