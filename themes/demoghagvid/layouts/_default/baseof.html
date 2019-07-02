@@ -18,23 +18,26 @@
                     <div class="flex flex-wrap mr-8 items-center justify-between">
                         <h3 class="font-bold text-sm mr-3">Default Theme Switcher</h3>
                         <div class="flex">
-                            <span class="cursor-pointer w-10 h-10 inline-block rounded-full mr-4" data-bg-color="#b84130" data-color="#fff"
+                            <span class="cursor-pointer w-10 h-10 inline-block rounded-full mr-4" data-bg-color="#b84130" data-color="#ffffff"
                                   style="background-color: #b84130">&nbsp;</span>
-                            <span class="cursor-pointer w-10 h-10 inline-block rounded-full mr-4" data-bg-color="#363d98" data-color="#fff"
+                            <span class="cursor-pointer w-10 h-10 inline-block rounded-full mr-4" data-bg-color="#363d98" data-color="#ffffff"
                                   style="background-color: #363d98">&nbsp;</span>
-                            <span class="cursor-pointer w-10 h-10 inline-block rounded-full" data-bg-color="#FFD5CD" data-color="#333"
+                            <span class="cursor-pointer w-10 h-10 inline-block rounded-full" data-bg-color="#FFD5CD" data-color="#333333"
                                   style="background-color: #FFD5CD">&nbsp;</span>
                         </div>
                     </div>
                     <h3 class="font-bold mr-4 text-sm">Dynamic Color</h3>
                     <div class="flex items-center">
                         <div class="flex items-center mr-3">
-                            <label class="text-sm mr-2" for="bg-color">Background:</label>
-                            <input class="cursor-pointer h-10 outline-none rounded-full w-10" type="color" id="bg-color" name="Background">
+                            <label class="text-sm mr-2">Background:</label>
+                            <input class="cursor-pointer h-10 outline-none rounded-full w-10 input-color-picker"
+                                   type="color" data-id="bg-color"
+                                   name="Background">
                         </div>
                         <div class="flex items-center">
-                            <label class="text-sm mr-2" for="color">Color:</label>
-                            <input class="cursor-pointer h-10 outline-none rounded-full w-10" type="color" id="color" name="Color">
+                            <label class="text-sm mr-2">Color:</label>
+                            <input class="cursor-pointer h-10 outline-none rounded-full w-10 input-color-picker"
+                                   type="color" data-id="color" name="Color">
                         </div>
                     </div>
                 </div>

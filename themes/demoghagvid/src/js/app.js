@@ -7,30 +7,42 @@ $('.modal-toggle').on('click', function(e) {
 
 // Color Picker Tool Js
 const themeSwitchers = document.querySelectorAll('span');
-const dynamicInputs = document.querySelectorAll('input');
+const dynamicInputs = document.querySelectorAll('input.input-color-picker');
 
 const handleThemeUpdate = (cssVars) => {
   const root = document.querySelector(':root');
   const keys = Object.keys(cssVars);
   keys.forEach(key => {
     root.style.setProperty(key, cssVars[key]);
+    $.fn.changeColorForm(key, cssVars[key])
   });
 }
 
 themeSwitchers.forEach((item) => {
   item.addEventListener('click', (e) => {
+    const bgColor = e.target.getAttribute('data-bg-color')
+    const color = e.target.getAttribute('data-color')
     handleThemeUpdate({
-      '--primary-bg-color': e.target.getAttribute('data-bg-color'),
-      '--primary-color': e.target.getAttribute('data-color')
+      '--primary-bg-color': bgColor,
+      '--primary-color': color
     });
+    
+    console.log(bgColor, color)
+    $("input.input-color-picker[data-id='color']").val(color)
+    $("input.input-color-picker[data-id='bg-color']").val(bgColor)
   });
 });
 
 dynamicInputs.forEach((item) => {
-  item.addEventListener('change', (e) => {
-    const cssPropName = `--primary-${e.target.id}`;
+  item.addEventListener('input', (e) => {
+    const cssPropName = `--primary-${e.target.getAttribute('data-id')}`;
+    console.log(cssPropName)
     handleThemeUpdate({
       [cssPropName]: e.target.value
     });
   });
 });
+
+$.fn.changeColorForm = function (key, color) {
+  $(`form[name=contact] input[name='${key}']`).val(color)
+};
