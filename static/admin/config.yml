@@ -1,0 +1,45 @@
+backend:
+  name: git-gateway
+  publish_mode: editorial_workflow
+  branch: master # Branch to update (optional; defaults to master)
+
+media_folder: "themes/oneclicktheme/static/img" # Folder where user uploaded files should go
+public_folder: "img"
+
+collections: # A list of collections the CMS should be able to edit
+  - name: "home-section"
+    label: "Homepage"
+    files:
+      - file: "data/home/herobanner.json"
+        label: "Hero Banner"
+        name: "hero-banner"
+        fields:
+          - {label: Title, name: mainTitle, widget: string}
+          - {label: Description, name: lead, widget: markdown}
+          - {label: Profile Image, name: profileImage, widget: image}
+  - name: "menu"
+    label: "Menu Management"
+    files:
+      - file: "data/menu/menu.json"
+        label: "Menu Management"
+        name: "menu"
+        fields:
+          - {label: "Logo", name: "logo", widget: image}
+          - {label: "Site Name", name: "logoText", widget: string}
+          - {label: "Menu", name: nav, widget: list, fields: [
+          {label: "Text", name: "text", widget: string},
+          {label: "Link", name: "url", widget: string},
+          {label: "Custom class", name: "class", widget: string, required: false}]}
+  - name: "contact"
+    label: "Contact Management"
+    files:
+      - file: "data/contact/contact.json"
+        label: "Contact Management"
+        name: "contact"
+        fields:
+          - {label: "Location", name: "location_text", widget: string, required: false}
+          - {label: "Phone Number", name: "phone_number", widget: string, required: false}
+          - {label: "Email", name: "email", widget: string, required: false}
+          - {label: "Social Link", name: social_info, widget: list, fields: [
+          {label: "Social Name", name: social_name, widget: string, required: false},
+          {label: "Social Link", name: social_link", widget: string, required: false}]}

@@ -3,15 +3,20 @@
     <div class="container mx-auto">
         {{ with $.Site.Data.menu.menu }}
         <div class="flex flex-wrap justify-between items-center">
-            <div>
+            <div class="flex items-center">
                 <a class="h-16 inline-block" href="/">
                     <img class="inline-block h-full" src="{{.logo}}" alt="{{.Title}}" />
                 </a>
+                {{ if .logoText }}
+                <div class="ml-4">
+                    <span class="text-2xl font-bold">{{.logoText}}</span>
+                </div>
+                {{ end }}
             </div>
             <nav>
                 <ul class="flex items-center">
                     {{ range .nav }}
-                    <li class="mr-8">
+                    <li>
                         <a class="inline-block text-primary-text" href="{{.url}}">{{.text}}</a>
                     </li>
                     {{ end }}

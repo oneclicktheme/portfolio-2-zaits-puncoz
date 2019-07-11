@@ -1,13 +1,11 @@
 {
   "logo": "/img/logo.svg",
+  "logoText": "Demo",
   "nav": [
     {
       "text": "Home",
-      "url": "/"
-    },
-    {
-      "text": "Blog",
-      "url": "https://medium.com/"
+      "url": "/",
+      "class": ""
     }
   ]
 }
