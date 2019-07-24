@@ -10,26 +10,23 @@ collections: # A list of collections the CMS should be able to edit
   - name: "home-section"
     label: "Homepage"
     files:
-      - file: "data/home/herobanner.json"
+      - file: "data/homepage/herobanner.json"
         label: "Hero Banner"
         name: "hero-banner"
         fields:
           - {label: Title, name: mainTitle, widget: string}
           - {label: Description, name: lead, widget: markdown}
+          - {label: CV, name: cv_link, widget: string}
           - {label: Profile Image, name: profileImage, widget: image}
-  - name: "menu"
-    label: "Menu Management"
+  - name: "logo"
+    label: "Logo Management"
     files:
-      - file: "data/menu/menu.json"
-        label: "Menu Management"
-        name: "menu"
+      - file: "data/logo/logo.json"
+        label: "Logo Management"
+        name: "logo"
         fields:
           - {label: "Logo", name: "logo", widget: image}
           - {label: "Site Name", name: "logoText", widget: string}
-          - {label: "Menu", name: nav, widget: list, fields: [
-          {label: "Text", name: "text", widget: string},
-          {label: "Link", name: "url", widget: string},
-          {label: "Custom class", name: "class", widget: string, required: false}]}
   - name: "contact"
     label: "Contact Management"
     files:
@@ -37,9 +34,11 @@ collections: # A list of collections the CMS should be able to edit
         label: "Contact Management"
         name: "contact"
         fields:
-          - {label: "Location", name: "location_text", widget: string, required: false}
-          - {label: "Phone Number", name: "phone_number", widget: string, required: false}
           - {label: "Email", name: "email", widget: string, required: false}
-          - {label: "Social Link", name: social_info, widget: list, fields: [
-          {label: "Social Name", name: social_name, widget: string, required: false},
-          {label: "Social Link", name: social_link", widget: string, required: false}]}
+          - {label: "Facebook", name: "facebook", widget: string, required: false}
+          - {label: "Twitter", name: "twitter", widget: string, required: false}
+          - {label: "Linkedin", name: "linkedin", widget: string, required: false}
+          - {label: "Medium", name: "medium", widget: string, required: false}
+          - {label: "Github", name: "github", widget: string, required: false}
+          - {label: "Instagram", name: "instagram", widget: string, required: false}
+          - {label: "Codepen", name: "codepen", widget: string, required: false}

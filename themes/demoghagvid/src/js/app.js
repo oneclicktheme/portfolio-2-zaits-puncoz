@@ -1,3 +1,4 @@
+import tilt from 'tilt.js'
 
 $('.modal-toggle').on('click', function(e) {
   e.preventDefault();
@@ -6,8 +7,14 @@ $('.modal-toggle').on('click', function(e) {
 });
 
 $(document).ready(function () {
+  const tilt = $('.js-tilt').tilt({
+    scale: 1.2,
+    glare: true,
+    maxGlare: .3
+  });
+  
   // Color Picker Tool Js
-  const themeSwitchers = document.querySelectorAll('span');
+  const themeSwitchers = document.querySelectorAll('.default-switch');
   const dynamicInputs = document.querySelectorAll('input.input-color-picker');
   
   const handleThemeUpdate = (cssVars) => {

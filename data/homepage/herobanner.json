@@ -1,5 +1,6 @@
 {
   "profileImage": "/img/hero-profile.jpg",
   "mainTitle": "John Doe",
-  "lead": "A freelance UI/UX designer from Nepal"
+  "lead": "A freelance UI/UX designer from Nepal",
+  "cv_link": "http://www.africau.edu/images/default/sample.pdf"
 }

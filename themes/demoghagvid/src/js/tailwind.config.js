@@ -14,8 +14,7 @@ module.exports = {
       body: ['Poppins', 'sans-serif'],
     },
     colors: {
-      white: '#fff',
-      'grey': '#565656',
+      'base-color': 'var(--text-color)',
       'primary-text': 'var(--primary-color)',
       'primary-bg': "var(--primary-bg-color)",
     },

@@ -2,7 +2,15 @@
 
 .section-banner {
   .title {
-    font-size: 5rem;
+    font-size: 2rem;
+
+    @media only screen and (min-width: 992px) {
+      font-size: 4rem;
+    }
+
+    @media only screen and (min-width: 1240px) {
+      font-size: 5rem;
+    }
   }
 
   .profile-img {
@@ -40,4 +48,18 @@ nav {
       margin-right: 0;
     }
   }
+}
+
+.social-link {
+  li {
+    margin-right: 16px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.transition {
+  transition: 0.2s;
 }

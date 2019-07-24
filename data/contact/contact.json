@@ -1,11 +1,10 @@
 {
-  "location_text": "Kumaripati, Lalitpur",
-  "phone_number": "+977-1-5008737",
-  "email": "info@yipl.com.np",
-  "social_info": [
-    {
-      "social_name": "",
-      "social_link": ""
-    }
-  ]
+  "email": "info-user@user.com.np",
+  "facebook": "https://www.facebook.com/",
+  "twitter": "https://www.twitter.com/",
+  "linkedin": "https://www.linkedin.com/",
+  "medium": "https://www.medium.com/",
+  "github": "https://www.github.com/",
+  "instagram": "https://www.instagram.com/",
+  "codepen": "https://www.codepen.com/"
 }
