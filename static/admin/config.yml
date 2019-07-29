@@ -18,6 +18,7 @@ collections: # A list of collections the CMS should be able to edit
           - {label: Description, name: lead, widget: markdown}
           - {label: CV, name: cv_link, widget: string}
           - {label: Profile Image, name: profileImage, widget: image}
+          - {label: Bio, name: highlights, widget: list}
   - name: "logo"
     label: "Logo Management"
     files:

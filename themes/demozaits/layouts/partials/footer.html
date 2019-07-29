@@ -1,0 +1,123 @@
+<!--Footer-->
+<footer>
+    <div class="container mx-auto">
+        {{ with $.Site.Data.contact.contact }}
+        <div class="flex flex-wrap -mx-4">
+
+            <div class="w-full md:w-1/2 px-4">
+                <div>
+                    <h2 class="uppercase mb-4">Connect</h2>
+                    <ul>
+                        {{ if .linkedin}}
+                        <!--Linkedin-->
+                        <li class="mb-2">
+                            <a href="{{.linkedin}}" target="_blank"
+                               class="text-primary-text flex items-center transition">
+                                <svg class="fill-current w-4 h-4 mr-4">
+                                    <use xlink:href="/img/icons.svg#ic-linkedin" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                </svg>
+                                <span class="inline-block">Linkedin</span>
+                            </a>
+                        </li>
+                        {{ end }}
+
+                        {{ if .medium}}
+                        <!--Medium-->
+                        <li class="mb-2">
+                            <a href="{{.medium}}" target="_blank"
+                               class="text-primary-text flex items-center transition">
+                                <svg class="fill-current w-4 h-4 mr-4">
+                                    <use xlink:href="/img/icons.svg#ic-medium" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                </svg>
+                                <span class="inline-block">Medium</span>
+                            </a>
+                        </li>
+                        {{ end }}
+
+                        {{ if .github }}
+                        <!--Github-->
+                        <li class="mb-2">
+                            <a href="{{.github}}" target="_blank"
+                               class="text-primary-text flex items-center transition">
+                                <svg class="fill-current w-4 h-4 mr-4">
+                                    <use xlink:href="/img/icons.svg#ic-github" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                </svg>
+                                <span class="inline-block">Twitter</span>
+                            </a>
+                        </li>
+                        {{ end }}
+
+                        {{ if .codepen }}
+                        <!--Codepen-->
+                        <li class="mb-2">
+                            <a href="{{.codepen}}" target="_blank"
+                               class="text-primary-text flex items-center transition">
+                                <svg class="fill-current w-4 h-4 mr-4">
+                                    <use xlink:href="/img/icons.svg#ic-codepen" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                </svg>
+                                <span class="inline-block">Codepen</span>
+                            </a>
+                        </li>
+                        {{ end }}
+                    </ul>
+                </div>
+            </div>
+
+            <div class="w-full md:w-1/2">
+                <div>
+                    <h2 class="uppercase mb-4">Social</h2>
+                    <ul>
+                        {{ if .facebook}}
+                        <!--Facebook-->
+                        <li class="mb-2">
+                            <a href="{{.facebook}}" target="_blank"
+                               class="text-primary-text flex items-center transition">
+                                <svg class="fill-current w-4 h-4 mr-4">
+                                    <use xlink:href="/img/icons.svg#ic-facebook" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                </svg>
+
+                                <span class="inline-block">Facebook</span>
+                            </a>
+                        </li>
+                        {{ end }}
+
+                        {{ if .twitter}}
+                        <!--Twitter-->
+                        <li class="mb-2">
+                            <a href="{{.twitter}}" target="_blank"
+                               class="text-primary-text flex items-center transition">
+                                <svg class="fill-current w-4 h-4 mr-4">
+                                    <use xlink:href="/img/icons.svg#ic-twitter" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                </svg>
+                                <span class="inline-block">Twitter</span>
+                            </a>
+                        </li>
+                        {{ end }}
+
+                        {{ if .instagram }}
+                        <!--Instagram-->
+                        <li>
+                            <a href="{{.instagram}}" target="_blank"
+                               class="text-primary-text flex items-center transition">
+                                <svg class="fill-current w-4 h-4 mr-4">
+                                    <use xlink:href="/img/icons.svg#ic-instagram" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                </svg>
+                                <span class="inline-block">Instagram</span>
+                            </a>
+                        </li>
+                        {{ end }}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        {{end}}
+        <div class="mt-10 flex flex-wrap justify-center xl:justify-between items-center text-sm">
+            <div class="text-base-color text-center xl:text-left">
+                <span>&copy; {{now.Year}}</span>
+                <a href="https://www.oneclicktheme.com/"
+                   class="text-primary-text" target="_blank">OneClickTheme</a>
+                <span>- {{.Title}} Theme. All rights reserved</span></div>
+        </div>
+    </div>
+</footer>
+<!--End Footer-->
