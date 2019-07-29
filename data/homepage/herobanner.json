@@ -1,11 +1,9 @@
 {
-  "profileImage": "/img/hero-profile.jpg",
   "mainTitle": "John Doe",
   "lead": "Dolore aute duis duis exercitation dolor mollit est labore cupidatat qui occaecat sunt reprehenderit deserunt. Qui sunt in laborum nostrud cillum ex nulla aliqua. Culpa laboris velit veniam magna aute minim pariatur sunt eu Lorem eiusmod voluptate Lorem.",
   "cv_link": "http://www.africau.edu/images/default/sample.pdf",
+  "profileImage": "/img/hero-profile.jpg",
   "highlights": [
-    "Creator",
-    "Nerd",
-    "Professional"
+    "adasdad adsadad adsad"
   ]
 }
