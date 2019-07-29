@@ -5,7 +5,7 @@
         <h1 class="title font-bold text-2xl lg:text-3xl xll:text-5xl mb-10">I'm <span class="text-primary-text">{{.mainTitle}}</span></h1>
         <div class="mb-10">
             <span class="font-bold text-5xl typewrite" data-period="2000"
-                  data-type='["{{ delimit .highlights "\", \""}}"]'>
+                  data-type='[{{ range .highlights }} "{{.info_text}}" , {{ end }}]'>
                 <span class="wrap"></span>
             </span>
         </div>

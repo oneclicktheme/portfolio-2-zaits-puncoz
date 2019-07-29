@@ -4,6 +4,11 @@
   "cv_link": "http://www.africau.edu/images/default/sample.pdf",
   "profileImage": "/img/hero-profile.jpg",
   "highlights": [
-    "adasdad adsadad adsad"
+    {
+      "info_text": "Creator"
+    },
+    {
+      "info_text": "Professional"
+    }
   ]
 }
