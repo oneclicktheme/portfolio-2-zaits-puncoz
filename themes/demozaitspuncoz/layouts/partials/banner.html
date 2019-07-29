@@ -1,5 +1,5 @@
 <!--Banner-->
-<section class="flex h-full items-center flex-wrap px-20 py-5">
+<section class="banner-section flex h-full items-center flex-wrap px-4 md:px-10 lg:px-20 py-5">
     {{ with $.Site.Data.homepage.herobanner }}
     <div>
         <h1 class="title font-bold text-2xl lg:text-3xl xll:text-5xl mb-10">I'm <span class="text-primary-text">{{.mainTitle}}</span></h1>
@@ -13,7 +13,7 @@
         <p class="mb-12">{{ replace .lead "\n" "<br/>" | safeHTML }}</p>
 
         {{ if .cv_link }}
-        <a class="text-primary-text transition" href="{{.cv_link}}" target="">Download Resume</a>
+        <a class="text-primary-text transition inline-block mb-12" href="{{.cv_link}}" target="">Download Resume</a>
         {{ end }}
     </div>
     {{ end }}

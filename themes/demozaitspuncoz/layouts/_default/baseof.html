@@ -4,9 +4,9 @@
 {{ partial "head.html" }}
 
 <body class="leading-normal antialiased font-body leading-snug">
-<canvas class="absolute"></canvas>
+<canvas class="hidden md:block absolute"></canvas>
 <div class="relative text-base-color">
-    <div class="lg:h-screen  flex flex-wrap">
+    <div class="md:h-screen flex flex-wrap">
         {{ partial "hero-image" . }}
         {{ block "main" . }} {{end}}
     </div>

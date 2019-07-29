@@ -119,7 +119,7 @@ let guiVars = function() {
   this.damping = 0.15;
   this.showIndicators = false;
   this.leftColor = '#9ba8b1';
-  this.rightColor = '#726cc5';
+  this.rightColor = '#333333';
 }
 
 let vars = new guiVars();
