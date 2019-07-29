@@ -10,7 +10,7 @@
             </span>
         </div>
 
-        <p class="mb-12">{{.lead}}</p>
+        <p class="mb-12">{{ replace .lead "\n" "<br/>" | safeHTML }}</p>
 
         {{ if .cv_link }}
         <a class="text-primary-text transition" href="{{.cv_link}}" target="">Download Resume</a>
