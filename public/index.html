@@ -74,7 +74,9 @@
                                     <h2 class="capitalize font-black text-3xl">To get started</h2>
                                     <p class="text-black-light text-xs">Please fill the necessary information for your site</p>
                                 </div>
-                                <form class="mt-10" name="contact" method="POST" data-netlify-recaptcha="true" netlify>
+                                <form class="mt-10" name="contact"
+      action="/success"
+      method="POST" data-netlify-recaptcha="true" netlify>
     <div class="mb-4">
         <label class="block font-bold mb-1 text-sm mb-1">Your Site Name</label>
         <input class="outline-none border w-full rounded px-2 py-3" type="text" name="name" required />
@@ -121,7 +123,7 @@
         <h1 class="title font-bold text-2xl lg:text-3xl xll:text-5xl mb-10">I'm <span class="text-primary-text">John Doe</span></h1>
         <div class="mb-10">
             <span class="font-bold text-5xl typewrite" data-period="2000"
-                  data-type='["Nerd"]'>
+                  data-type='["Creative Coder"]'>
                 <span class="wrap"></span>
             </span>
         </div>
