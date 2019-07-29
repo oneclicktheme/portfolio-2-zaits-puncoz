@@ -1,11 +1,4 @@
 {
   "logo": "/img/logo.svg",
-  "logoText": "Demo",
-  "nav": [
-    {
-      "text": "Home",
-      "url": "/",
-      "class": ""
-    }
-  ]
+  "logoText": "Puncoz Nepal || Software Engineer"
 }
