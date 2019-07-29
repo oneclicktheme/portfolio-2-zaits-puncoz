@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+{{ partial "head.html" }}
+
+<body class="leading-normal antialiased font-body leading-snug">
+<canvas class="absolute"></canvas>
+<div class="relative text-base-color">
+    <div class="lg:h-screen  flex flex-wrap">
+        {{ partial "hero-image" . }}
+        {{ block "main" . }} {{end}}
+    </div>
+</div>
+
+<!-- Scripts -->
+{{ $scripts := resources.Get "js/manifest.js" | fingerprint }}
+{{ with $scripts }}
+<script type="text/javascript" src="{{ .Permalink | relURL }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous" defer></script>
+{{ $.Scratch.Set "$scripts" . }}
+{{ end }}
+
+{{ $scripts := resources.Get "js/vendor.js" | fingerprint }}
+{{ with $scripts }}
+<script type="text/javascript" src="{{ .Permalink | relURL }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous" defer></script>
+{{ $.Scratch.Set "scripts" . }}
+{{ end }}
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.1/dat.gui.min.js"></script>
+
+{{ $scripts := resources.Get "js/app.js" | fingerprint }}
+{{ with $scripts }}
+<script type="text/javascript" src="{{ .Permalink | relURL }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous" defer></script>
+{{ $.Scratch.Set "scripts" . }}
+{{ end }}
+</body>
+
+</html>

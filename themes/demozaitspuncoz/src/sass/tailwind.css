@@ -7,7 +7,7 @@
 :root {
     --text-color: #ffffff;
     --primary-bg-color: #63569a;
-    --primary-color: #00ffee;
+    --primary-color: #ffffff;
 }
 
 @tailwind base;
